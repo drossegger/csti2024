@@ -112,7 +112,9 @@ For example, $(\omega\cdot n, \omega^* \cdot n) \leq_c (\omega \cdot k, \omega^*
 
 \begin{enumerate}
     \item Is there a computable first-order theory $T$ such that the isomorphism relation for models of $T$ with domain $\omega$ is as complicated as graph isomorphism with respect to Borel reducibility?
-    \item Consider classes as linear orders, Trees, Boolean algebras: is Elementary embeddability restricted to these classesa a complete analytic quasi-order? (In general, the anwer is yes).
+    \item Consider classes where we know that embeddability is not an analytic
+        complete quasi-order such as linear orderings or Boolean algebras. Is
+        elementary embeddability for this classes analytic complete?
 \end{enumerate}
 
 \subsection*{Answer to (1)}
@@ -120,7 +122,8 @@ Yes! We can obtain a reduction $f:Graphs \to Graphs$ such that for all graphs
 $x,y$, $f(x)\equiv f(y)$. Essentially, we just have to use the
 pairs-of-structure theorem of Ash and Knight and do a clever jump inversion. For
 example the construction given in [Ros] already has the above property. The
- proof of Lemma 7 in [Ros] already shows this mutatis mutandis.
+ proof of Lemma 7 in [Ros] already shows mutatis mutandis that $f(x)\equiv f(y)$
+ for the reduction provided there.
 
  [Ros] Rossegger, Dino. 2022. “Degree Spectra of Analytic Complete Equivalence Relations.” The Journal of Symbolic Logic 87 (4): 1663–76. https://doi.org/10.1017/jsl.2021.82.
 

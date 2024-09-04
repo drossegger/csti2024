@@ -16,8 +16,9 @@
 \usepackage[colorlinks=true, allcolors=blue]{hyperref}
 \newtheorem{theorem}{Theorem}
 \newtheorem{definition}{Definition}
-\title{Open Problems}
-\author{Computable Structure Theory and Interactions}
+\title{Open Problems \\Computable Structure Theory and Interactions 2024 \\ TU Wien July
+15--17 2024}
+\author{Vittorio Cipriani and Dino Rossegger}
 \date{}
 \begin{document}
 \maketitle
@@ -26,12 +27,47 @@
 
 
 \section*{Question 1 {\small{by Dino Rossegger}}}
-Suppose $R \subseteq \mathbb{N}^k$ is definable by a $\Sigma_1(X)$ formula in $\mathcal{L}_{\omega_1\omega}$ for some comeager set $X$.\\
-\textit{Questions}:
+Suppose $R \subseteq \mathbb{N}^k$ is definable by a $\Sigma_1(X)$ formula in $\mathcal{L}_{\omega_1\omega}$ for some comeager set $X$.
+
+\subsection*{Questions}
 \begin{itemize}
     \item Is $R$ $\Sigma_1(\emptyset)$-definable?
     \item What about the same question as above replacing \lq\lq comeager\rq\rq\ by \lq\lq co-null\rq\rq?
 \end{itemize}
+
+\subsection*{Answer (Aguilera, Miller, Rossegger, Villano)}
+By the relativization of the easy direction of the Ash-Knight-Manasse-Slaman and
+Chisholm theorem for $\alpha=1$, if a relation $R$ on a
+computable structure $\mathcal A$ is $\Sigma_1^{in}(X)$ definable, then
+$R^\mathcal{B}$ is $X$-c.e.\ for every computable copy $\mathcal B$ of $\mathcal
+A$. By the folklore (?) result that a set $A\subseteq \omega$ is computably
+enumerable if and only if the set $\{ X\subseteq \omega: A\text{ is $X$-c.e.}\}$
+is comeagre we obtain that $R^\mathcal{B}$ is c.e.\ for every computable
+$\mathcal B\cong \mathcal A$. Applying the Ash-Knight-Manasse-Slaman and
+Chisholm theorem we obtain that $R$ is $\Sigma^{in}_1(\emptyset)$-definable.
+
+The same argument works with conull instead of comeagre by replacing the
+folklore result in the above argument by an argument of de
+Leeuw-Moore-Shannon-Shapiro (see [DH, Theorem 8.12.1]).
+
+[DH] Downey, Rodney G., and Denis R. Hirschfeldt. 2010. Algorithmic Randomness
+and Complexity. Springer Science \& Business Media.
+
+\subsection*{Further questions (added post-hoc)}
+These results lead to the following questions:
+\begin{itemize}
+    \item If $R$ is $\Sigma_\alpha^{in}$-definable for a comeagre (conull) set
+        of $X$, is $R$ $\Sigma_{\alpha}^{in}(\emptyset)$?
+    \item In the above we implicitly allowed parameters in our formulas. If we disallow
+parameters we obtain the following version of Ash-Knight-Manasse-Slaman and
+Chisholm for $\Sigma_1^{in}$-definability: There is a computable function $f$ such that for
+$\Phi_e\cong \mathcal A$, $W_{f(e)}=R^{\Phi_e}$ if and only if $R$ is
+$\Sigma_1^{in}$-definable without parameters. 
+There are many ways one could try to uniformize the above question. For example,
+what if on a comeagre set of reals we have $\Sigma^{in}_1$-definability without
+parameters but always with different formulas?
+\end{itemize}
+
 
 
 \section*{Question 2 {\small{by Russell Miller}}}
@@ -74,10 +110,19 @@ For example, $(\omega\cdot n, \omega^* \cdot n) \leq_c (\omega \cdot k, \omega^*
 
 \section*{Question 4 {\small{by Gianluca Paolini}}}
 
-\begin{itemize}
+\begin{enumerate}
     \item Is there a computable first-order theory $T$ such that the isomorphism relation for models of $T$ with domain $\omega$ is as complicated as graph isomorphism with respect to Borel reducibility?
     \item Consider classes as linear orders, Trees, Boolean algebras: is Elementary embeddability restricted to these classesa a complete analytic quasi-order? (In general, the anwer is yes).
-\end{itemize}
+\end{enumerate}
+
+\subsection*{Answer to (1)}
+Yes! We can obtain a reduction $f:Graphs \to Graphs$ such that for all graphs
+$x,y$, $f(x)\equiv f(y)$. Essentially, we just have to use the
+pairs-of-structure theorem of Ash and Knight and do a clever jump inversion. For
+example the construction given in [Ros] already has the above property. The
+ proof of Lemma 7 in [Ros] already shows this mutatis mutandis.
+
+ [Ros] Rossegger, Dino. 2022. “Degree Spectra of Analytic Complete Equivalence Relations.” The Journal of Symbolic Logic 87 (4): 1663–76. https://doi.org/10.1017/jsl.2021.82.
 
 
 \section*{Question 5 {\small{by Mateusz \L{}e\l{}ik}}}

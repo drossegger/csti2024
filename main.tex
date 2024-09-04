@@ -1,0 +1,96 @@
+\documentclass{article}
+
+% Language setting
+% Replace `english' with e.g. `spanish' to change the document language
+\usepackage[english]{babel}
+
+% Set page size and margins
+% Replace `letterpaper' with `a4paper' for UK/EU standard size
+\usepackage[letterpaper,top=2cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+
+% Useful packages
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+\usepackage{graphicx}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+\newtheorem{theorem}{Theorem}
+\newtheorem{definition}{Definition}
+\title{Open Problems}
+\author{Computable Structure Theory and Interactions}
+\date{}
+\begin{document}
+\maketitle
+
+
+
+
+\section*{Question 1 {\small{by Dino Rossegger}}}
+Suppose $R \subseteq \mathbb{N}^k$ is definable by a $\Sigma_1(X)$ formula in $\mathcal{L}_{\omega_1\omega}$ for some comeager set $X$.\\
+\textit{Questions}:
+\begin{itemize}
+    \item Is $R$ $\Sigma_1(\emptyset)$-definable?
+    \item What about the same question as above replacing \lq\lq comeager\rq\rq\ by \lq\lq co-null\rq\rq?
+\end{itemize}
+
+
+\section*{Question 2 {\small{by Russell Miller}}}
+\textit{Notations}:
+\begin{itemize}
+    \item $\mathsf{TFAB}_n$ denotes the class of torsion free abelian group of rank $n$;
+    \item $\mathsf{FTD}_n$ denotes the class of fields of trascendence degree $n$;
+    \item $\mathsf{TD}_n$  denotes the class of fields of characteristic $0$ and transcendence degree $n$.
+\end{itemize}
+\textit{Known results}:
+\begin{itemize}
+    \item (Hjorth, Thomas)  $\mathsf{TFAB}_n<_B \mathsf{TFAB}_{n+1}$ (here $<_B$ denotes Borel reducibility). In contrast, 
+    \item (Thomas, Velikovic)   For every $n$, $\mathsf{FTD}_{13} \equiv_B \mathsf{FTD}_n$.
+\end{itemize}
+The following is known in the context of Turing computable embeddings (denoted by $\leq_{tc}$).
+\begin{itemize}
+    \item (Ho, Knight, Miller)    For every $n$, $\mathsf{TFAB}_n \leq_{tc} \mathsf{FTD}_n$.
+\end{itemize}
+\textit{Questions}:
+\begin{itemize}
+    \item $\mathsf{TD}_n \geq_B \mathsf{FTD}_{n+1}$?
+    \item  $\mathsf{TD}_n \leq_B \mathsf{TFAB}_{n}$? The answer is no for $n \geq 13$.
+    \item Same question as above but replacing $\leq_B$ with $\leq_{tc}$. Again, the answer is no for $n\geq13$.
+\end{itemize}
+
+
+\section*{Question 3 {\small{by Stefan Vatev}}}
+It is known that for all limit ordinals $\alpha,\beta$, $(\alpha,\alpha^*)\equiv_{tc} (\beta,\beta^*)$.\\
+\textit{Question}:
+\begin{itemize}
+    \item What happens if we replace Turing computable embedding with enumeration reducibility?
+\end{itemize}
+
+\begin{definition}[Enumeration reducibility]
+    Let $A,B \subseteq \mathbb{N}$. We say that $A$ is enumeration reducible to $B$ (notation, $A \leq_e B$) if:
+    \[(\exists e)(x \in A \iff (\exists \text{ finite } D\subseteq B)(\langle x,D\rangle \in W_e)).\]
+\end{definition}
+For example, $(\omega\cdot n, \omega^* \cdot n) \leq_c (\omega \cdot k, \omega^* \cdot k) $ if and only if $n | k$ (here $\leq_c$ denotes computable embedding).\\
+
+
+\section*{Question 4 {\small{by Gianluca Paolini}}}
+
+\begin{itemize}
+    \item Is there a computable first-order theory $T$ such that the isomorphism relation for models of $T$ with domain $\omega$ is as complicated as graph isomorphism with respect to Borel reducibility?
+    \item Consider classes as linear orders, Trees, Boolean algebras: is Elementary embeddability restricted to these classesa a complete analytic quasi-order? (In general, the anwer is yes).
+\end{itemize}
+
+
+\section*{Question 5 {\small{by Mateusz \L{}e\l{}ik}}}
+Let the Scott function of a theory  be the function defined as 
+ \[S_T(\alpha):=|\{\mathcal{M} \models T : SR(\mathcal{M})= \alpha\}|.\] 
+ \textit{Question}:
+ \begin{itemize}
+     \item Is there a non-trivial first-order theory $T$ such that $S_T$ is not monotone or has interesting behavior?
+ \end{itemize}
+
+
+
+\section*{Question 6 {\small{by David Gonzalez}}}
+What are the possible Scott spectra of first-order theories?
+
+\end{document}
